@@ -1,15 +1,19 @@
 package ac.za.cput.adp3.xyzcongolmerate.factory.demography;
 
+import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Race;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class RaceFactoryTest {
 
-    //TODO: implement method body ONLY!
     @Test
     public void buildRace() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Race rc = RaceFactory.buildRace("Asian");
+        Assert.assertNotNull(rc);
+        Assert.assertNotNull(rc.getRaceId());
+        Assert.assertEquals("Asian", rc.getRaceDescription());
         /**
          * Your implementation goes here
          *
